@@ -1,14 +1,30 @@
 'use strict';
 
-var leftBorderWidth = 1;
-let second = 3;
-const pi = 3.14;
+let appData = {
+    money: undefined,
+    timeData: undefined,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
+    savings: false
+};
 
-console.log(second);
+let money = +prompt("Ваш бюджет на месяц?", "50000"); //бюджет на месяц
+let time = prompt("Введите дату в формате YYYY-MM-DD");
 
-let b = "string";
+appData.money = money;
+appData.timeData = time;
 
-console.log(b);
+let OneItemExpenses = prompt("Введите обязательную статью расходов в этом месяце");
+let MoneyOneItemExpenses = prompt("Во сколько обойдется?");
 
-//confirm("Вам исполнилось 18 лет?");
-alert("Привет Мир");
+appData.expenses[OneItemExpenses] = MoneyOneItemExpenses;
+
+let TwoItemExpenses = prompt("Введите обязательную статью расходов в этом месяце");
+let MoneyTwoItemExpenses = prompt("Во сколько обойдется?");
+
+appData.expenses[TwoItemExpenses] = MoneyTwoItemExpenses;
+
+alert("Ваш бюджет на 1 день " + appData.money/30);
+
+console.log(appData);
