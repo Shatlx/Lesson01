@@ -28,3 +28,12 @@ appData.expenses[TwoItemExpenses] = MoneyTwoItemExpenses;
 alert("Ваш бюджет на 1 день " + appData.money/30);
 
 console.log(appData);
+
+//Сколько типов данных существует в JS?
+//8
+
+//Как вывести информацию в консоль?
+//Командой console.log()
+
+//Какая функция операторов || и &&?
+//|| - или   &&  - и
